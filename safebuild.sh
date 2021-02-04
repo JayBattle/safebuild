@@ -1,5 +1,7 @@
 #!/bin/bash
 #This safely builds your docker image in a subdirectory inserting all variables found in .env files
+#Requirements: docker, moreutils
+#TODO: remove existing dir
 Image=$1
 
 echo Starting Safe Build...
