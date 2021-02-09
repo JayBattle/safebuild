@@ -28,7 +28,7 @@ foreach ($varFile in $Varfiles) {
         }
     }
 }
-docker build --no-cache -t $Image .
+docker build -t $Image . #--no-cache
 Set-Location ..
 Remove-Item $Image -Recurse -Force
 Write-Host Done With Safe Build!
