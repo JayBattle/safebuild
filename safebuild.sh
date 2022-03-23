@@ -15,7 +15,7 @@ export $(cut -d= -f1 *.env)
 rm -r *.env
 for file in * ; do envsubst < $file | sponge $file ; done
 for file in .* ; do envsubst < $file | sponge $file ; done
-docker build -t $Image .
+sudo docker build -t $Image .
 cd ..
 rm -r $Image
 echo Done With Safe Build!
